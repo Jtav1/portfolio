@@ -2,6 +2,8 @@
   <v-app>
     <v-content>
       <Homepage />
+      <span style="text-align:center;"><h2>Demo Reel</h2></span>
+      <Portfolio />
     </v-content>
      <v-footer
         app
@@ -21,12 +23,14 @@
 
 <script>
 import Homepage from "./components/Homepage";
+import Portfolio from "./components/Portfolio";
 
 export default {
   name: "App",
 
   components: {
-    Homepage
+    Homepage,
+    Portfolio
   },
 
   data: () => ({
