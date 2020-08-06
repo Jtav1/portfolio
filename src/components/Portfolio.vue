@@ -1,57 +1,52 @@
 <template>
-  <div id="portfolio">
-    <v-expansion-panels>
-      <v-expansion-panel>
-        <v-expansion-panel-header>
-          <v-row>
-            <v-col cols="12" sm="1" md="1" lg="1" xl="1">
-              <v-img
-                src="../assets/jtav.png"
-                contain
-                height="30"
-                style="text-align:left;"
-              ></v-img>
-            </v-col>
-            <v-col cols="12" sm="1" md="1" lg="1" xl="1">
-              Justintavares.com
-            </v-col>
-          </v-row>
-        </v-expansion-panel-header>
-        <v-expansion-panel-content>
-          <span v-html="justintavaresContent"></span>
-        </v-expansion-panel-content>
-      </v-expansion-panel>
-
-      <v-expansion-panel>
-        <v-expansion-panel-header>
-          <v-row>
-            <v-col cols="12" sm="1" md="1" lg="1" xl="1">
-              <v-img
-                src="../assets/server.png"
-                contain
-                height="30"
-                style="text-align:left;"
-              ></v-img>
-            </v-col>
-            <v-col cols="12" sm="1" md="1" lg="1" xl="1">
-              Homelab
-            </v-col>
-          </v-row></v-expansion-panel-header
+  <div id="portfolio" class="portfolio">
+    <span style="text-align:center;"><h2>What can Justin do for you?</h2></span>
+        <v-container fluid>
+      <v-row dense>
+        <v-col
+          v-for="card in cards"
+          :key="card.title"
+          :cols="card.flex"
         >
-        <v-expansion-panel-content>
-          <span v-html="homelabContent"></span>
-        </v-expansion-panel-content>
-      </v-expansion-panel>
-    </v-expansion-panels>
+          <v-card>
+            <v-img
+              :src="card.src"
+              class="white--text align-end"
+              gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
+              height="200px"
+            >
+              <v-card-title v-text="card.title"></v-card-title>
+            </v-img>
+
+            <v-card-actions>
+              <v-spacer></v-spacer>
+                <v-btn icon>
+                <a :href="card.link">
+                  <v-img src="../assets/GitHub-Mark-32px.png"></v-img>
+                </a>
+              </v-btn>
+            </v-card-actions>
+          </v-card>
+        </v-col>
+      </v-row>
+    </v-container>
   </div>
 </template>
 <script>
 export default {
   data: () => ({
-    justintavaresContent: "<ul><li><a href='https://github.com/Jtav1/portfolio'>https://github.com/Jtav1/portfolio</a> - Now running via Docker!</li></ul>",
-    homelabContent: "<p>Justin's homelab currently contains a Dell R710 running Unraid 6.8.1.</p><p>This server runs multiple docker containers as well as at least one linux VM at any given time</p><p>Future projects for this server may include a smart home server. Currently, the server runs a nextcloud instance, a reverse nginx proxy to enable SSL-enabled connections to websites hosted there, and webhosting for this site.</p>"
-  })
+    cards: [
+      { title: "Front End Stuff", src: "https://i.imgur.com/7Na2IkL.jpg", flex: 4, link: "https://github.com/Jtav1/portfolio", icon: "../assets/GitHub-Mark-32px.png" },
+      { title: "Back End Stuff", src: "https://i.imgur.com/VxBnHZ4.png", flex: 4, link: "https://github.com/Jtav1/covid-19-project-backend", icon: "../assets/GitHub-Mark-32px.png" },
+      { title: "Server Stuff", src: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Wikimedia_Foundation_Servers-8055_43.jpg/1280px-Wikimedia_Foundation_Servers-8055_43.jpg", flex: 4, link: "#server", icon:"mdi-server" },
+    ]
+ })
 };
 </script>
 
-<style></style>
+<style>
+.portfolio {
+  background-color: lightgrey;
+  padding: 5em 0 5em 0;
+}
+</style>
