@@ -48,7 +48,7 @@
 <script>
 export default {
   data: () => ({
-    justintavaresContent: "<ul><li><a href='https://github.com/Jtav1/portfolio'>https://github.com/Jtav1/portfolio</a></li></ul>",
+    justintavaresContent: "<ul><li><a href='https://github.com/Jtav1/portfolio'>https://github.com/Jtav1/portfolio</a> - Now running via Docker!</li></ul>",
     homelabContent: "<p>Justin's homelab currently contains a Dell R710 running Unraid 6.8.1.</p><p>This server runs multiple docker containers as well as at least one linux VM at any given time</p><p>Future projects for this server may include a smart home server. Currently, the server runs a nextcloud instance, a reverse nginx proxy to enable SSL-enabled connections to websites hosted there, and webhosting for this site.</p>"
   })
 };
