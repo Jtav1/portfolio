@@ -1,24 +1,57 @@
 <template>
   <v-app>
     <v-app-bar dense fixed>
-      <v-app-bar-nav-icon></v-app-bar-nav-icon>
 
-      <v-toolbar-title class="script">Justin Tavares's Homepage</v-toolbar-title>
+      <v-tooltip bottom>
+        <template v-slot:activator="{ on, attrs }">
+          <v-app-bar-nav-icon
+          v-bind="attrs"
+          v-on="on"
+          ></v-app-bar-nav-icon>
+          </template>
+        <span>Projects - Coming Soon</span>
+      </v-tooltip>
+
+
+      <v-toolbar-title class="script">Justin's Homepage</v-toolbar-title>
 
       <v-spacer></v-spacer>
-      <v-btn icon>
-        <a href="resume.html"><v-icon>mdi-file-document</v-icon></a>
-      </v-btn>
-      <v-btn icon>
+      <v-tooltip bottom>
+        <template v-slot:activator="{ on, attrs }">
+        <v-btn icon
+          v-bind="attrs"
+          v-on="on">
+          <a href="resume.html"><v-icon>mdi-file-document</v-icon></a>
+        </v-btn>
+        </template>
+        <span>Résumé</span>
+      </v-tooltip>
+       <v-tooltip bottom>
+        <template v-slot:activator="{ on, attrs }">
+        <v-btn icon
+          v-bind="attrs"
+          v-on="on">
         <a href="https://www.linkedin.com/in/justin-tavares-b0459a5a/">
           <v-img src="./assets/icons8-linkedin-48.png"></v-img>
         </a>
       </v-btn>
-      <v-btn icon>
+        </template>
+        <span>Linkedin</span>
+      </v-tooltip>
+       <v-tooltip bottom>
+        <template v-slot:activator="{ on, attrs }">
+        <v-btn icon
+          v-bind="attrs"
+          v-on="on">
         <a href="https://www.github.com/jtav1/">
           <v-img src="./assets/GitHub-Mark-32px.png"></v-img>
         </a>
       </v-btn>
+        </template>
+        <span>Github</span>
+      </v-tooltip>
+      
+      
       
     </v-app-bar>
     <v-main>
