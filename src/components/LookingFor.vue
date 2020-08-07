@@ -3,7 +3,7 @@
     <span style="text-align:center;">
       <h2>What am I looking for?</h2>
     </span>
-    <v-carousel cycle height="400" hide-delimiter-background show-arrows-on-hover>
+    <v-carousel cycle interval="10000" height="400" hide-delimiter-background show-arrows-on-hover>
       <v-carousel-item v-for="(slide, i) in slides" :key="i">
         <v-sheet :color="colors[i]" height="100%">
           <v-row class="lookingForHeader" align="center" justify="center">
@@ -31,7 +31,7 @@ export default {
         {
           title: "Remote-Friendly",
           subtext:
-            "I am looking for a remote position for a North American company.",
+            "I am looking for a remote position with a North American company.",
         },
         {
           title: "Full Stack",
