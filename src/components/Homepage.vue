@@ -25,13 +25,13 @@ export default {
 <style scoped>
 .hirebanner {
   font-size: 5em;
-  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: black;
 }
 
 .hiresubbanner {
   font-size: 3em;
-  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: black;
 }
 
