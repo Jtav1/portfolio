@@ -1,9 +1,9 @@
 <template>
   <div class="portfolio">
     <span style="text-align:center;">
-      <h2>What is Justin looking for?</h2>
+      <h2>What am I looking for?</h2>
     </span>
-    <v-carousel height="400" hide-delimiter-background show-arrows-on-hover>
+    <v-carousel cycle height="400" hide-delimiter-background show-arrows-on-hover>
       <v-carousel-item v-for="(slide, i) in slides" :key="i">
         <v-sheet :color="colors[i]" height="100%">
           <v-row class="lookingForHeader" align="center" justify="center">
@@ -36,17 +36,17 @@ export default {
         {
           title: "Full Stack",
           subtext:
-            "I have experience as a full stack developer working in a Javascript environment (Vue/Vuex, Nodejs/Express), and with dozens of other tech stacks - see my Résumé for more info (the document link in the header)",
+            "I have experience as a full stack developer working in a Javascript environment (Vue/Vuex, Nodejs/Express), and with dozens of other tech stacks (PHP, .NET, Java - see my Résumé for a full list).",
         },
         {
           title: "Front End",
           subtext:
-            "I have experience building complicated front-end code using Javascript (Vue/Vuetify/Bootstrap) and various other technologies",
+            "I have experience building complicated front-end code using Javascript (Vue, React, Angular), component libraries (like Vuetify and Bootstrap) and various other technologies.",
         },
         {
           title: "Back End",
           subtext:
-            "I have experience building complex back-ends and APIs for websites in various languages. I'm looking for a Javascript-based stack but I'm also comfortable in PHP",
+            "I have experience building complex back-ends and APIs for websites in various languages. I'm looking for a Javascript-based stack but I'm also comfortable in PHP and I am willing to learn other languages.",
         }
       ],
     };
