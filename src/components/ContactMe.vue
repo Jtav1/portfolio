@@ -4,8 +4,7 @@
       <v-list-item three-line>
         <v-list-item-content>
           <v-list-item-title class="headline mb-1">Interested in hiring me?</v-list-item-title>
-          <v-list-item-subtitle>If you have an open position that you think I might be a good fit for</v-list-item-subtitle>
-         <v-list-item-subtitle>Email me at <a href="mailto:justintavares@gmail.com">JustinTavares@gmail.com</a></v-list-item-subtitle>
+          <v-list-item-subtitle>Email me at <a href="mailto:justintavares@gmail.com">JustinTavares@gmail.com</a></v-list-item-subtitle>
 
         </v-list-item-content>
 
