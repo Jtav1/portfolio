@@ -35,3 +35,8 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
  ```
  sudo docker run --publish 8080:80 --detach --name justintavares-web justintavares-web/latest
  ```
+ 
+ with mounted directory:
+ ```
+ sudo docker run -p 8080:80 -d -it --name justintavares-web --mount type=bind,source=/home/justin/files,target=/usr/share/nginx/html/files,readonly justintavares-web/latest
+ ```
